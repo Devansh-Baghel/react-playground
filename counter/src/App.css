@@ -1,0 +1,18 @@
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  width: 99vw;
+  height: 90vh;
+}
+
+button{
+  width: 200px;
+  height: 200px;
+  font-size: 50px;
+}
+
+span{
+  font-size: 90px;
+}
