@@ -12,6 +12,9 @@ function App() {
     setTodo([...todo, newTask]);
   }
 
+  function deleteItem(taskName) {
+    setTodo(todo.filter(task => task !== taskName))
+  }
 
   return (
     <div className="app">
@@ -21,13 +24,15 @@ function App() {
       </div>
 
       <div className="list">
-        {todo.map(item => {
+        {todo.map((item) => {
           return (
             <div>
               <h2>{item}</h2>
-              <button type="">X</button>
+              <button type="" onClick={() => deleteItem(item)}>
+                X
+              </button>
             </div>
-          )
+          );
         })}
       </div>
     </div>
