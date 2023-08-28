@@ -25,7 +25,7 @@ function App() {
           return (
             <div>
               <h2>{item}</h2>
-              {/* <button type="">X</button> */}
+              <button type="">X</button>
             </div>
           )
         })}
