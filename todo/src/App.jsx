@@ -12,6 +12,7 @@ function App() {
     setTodo([...todo, newTask]);
   }
 
+
   return (
     <div className="app">
       <div className="add-task">
@@ -21,7 +22,12 @@ function App() {
 
       <div className="list">
         {todo.map(item => {
-          return <h2>{item}</h2>
+          return (
+            <div>
+              <h2>{item}</h2>
+              {/* <button type="">X</button> */}
+            </div>
+          )
         })}
       </div>
     </div>
