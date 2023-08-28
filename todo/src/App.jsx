@@ -9,11 +9,15 @@ function App() {
   }
 
   function addTask() {
-    setTodo([...todo, newTask]);
+    const task = {
+      id: todo.length === 0 ? 1 : todo[todo.length - 1].id + 1,
+      taskName: newTask,
+    }
+    setTodo([...todo, task]);
   }
 
-  function deleteItem(taskName) {
-    setTodo(todo.filter(task => task !== taskName))
+  function deleteItem(id) {
+    setTodo(todo.filter(task => task.id !== id))
   }
 
   return (
@@ -27,8 +31,8 @@ function App() {
         {todo.map((item) => {
           return (
             <div>
-              <h2>{item}</h2>
-              <button type="" onClick={() => deleteItem(item)}>
+              <h2>{item.taskName}</h2>
+              <button type="" onClick={() => deleteItem(item.id)}>
                 X
               </button>
             </div>
