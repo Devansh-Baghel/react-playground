@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Task from "./Task";
 
 function App() {
   const [todo, setTodo] = useState([]);
@@ -29,14 +30,7 @@ function App() {
 
       <div className="list">
         {todo.map((item) => {
-          return (
-            <div>
-              <h2>{item.taskName}</h2>
-              <button type="" onClick={() => deleteItem(item.id)}>
-                X
-              </button>
-            </div>
-          );
+          return <Task taskName={item.taskName} id={item.id} deleteItem={deleteItem}/>
         })}
       </div>
     </div>
