@@ -13,12 +13,25 @@ function App() {
     const task = {
       id: todo.length === 0 ? 1 : todo[todo.length - 1].id + 1,
       taskName: newTask,
-    }
+      completed: false,
+    };
     setTodo([...todo, task]);
   }
 
   function deleteItem(id) {
-    setTodo(todo.filter(task => task.id !== id))
+    setTodo(todo.filter((task) => task.id !== id));
+  }
+
+  function completeTask(id) {
+    setTodo(
+      todo.map((task) => {
+        if (task.id === id) {
+          return { ...task, completed: true };
+        } else {
+          return task;
+        }
+      })
+    );
   }
 
   return (
@@ -30,7 +43,15 @@ function App() {
 
       <div className="list">
         {todo.map((item) => {
-          return <Task taskName={item.taskName} id={item.id} deleteItem={deleteItem}/>
+          return (
+            <Task
+              taskName={item.taskName}
+              id={item.id}
+              deleteItem={deleteItem}
+              completeTask={completeTask}
+              completed={item.completed}
+            />
+          );
         })}
       </div>
     </div>
