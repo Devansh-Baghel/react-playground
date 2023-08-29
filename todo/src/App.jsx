@@ -22,16 +22,16 @@ function App() {
 
   return (
     <div className="app">
-      <form className="add-task" onSubmit={e => e.preventDefault()}>
+      <div className="add-task">
         <input onChange={handleChange} />
-        <button onClick={addTask} type="submit"> Add Task</button>
-      </form>
+        <button onClick={addTask}> Add Task</button>
+      </div>
 
       <div className="list">
         {todo.map((item) => {
           return (
             <div>
-              <h3>{item.taskName}</h3>
+              <h2>{item.taskName}</h2>
               <button type="" onClick={() => deleteItem(item.id)}>
                 X
               </button>
