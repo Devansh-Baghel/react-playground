@@ -1,8 +1,8 @@
-# React + Vite
+# PedroTech React Course
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a playground for learning react from [this](https://youtu.be/f55qeKGgB_M) course.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The folders in src/ correspond as follows:
+1. todo/ - module 5 of the course
+2. lifecycle/ - module 6 of the course
+3. fetch/ - module 7 of the course
