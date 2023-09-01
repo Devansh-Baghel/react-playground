@@ -1,15 +1,17 @@
 import React from "react";
+import axios from "axios";
 
 function Fetch() {
-  fetch("https://catfact.ninja/fact")
-    .then((res) => res.json())
-    .then((data) => {
-      console.log(data);
+  function getFact() {
+    axios.get("https://catfact.ninja/fact").then((res) => {
+      console.log(res.data)
+      return res.data
     });
+  }
 
   return (
     <div>
-      <button type="button">Generate Cat Fact</button>
+      <button onClick={getFact}>Generate Cat Fact</button>
       <p></p>
     </div>
   );
