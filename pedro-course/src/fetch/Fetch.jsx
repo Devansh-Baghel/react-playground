@@ -1,9 +1,18 @@
-import React from 'react'
+import React from "react";
 
-function App() {
+function Fetch() {
+  fetch("https://catfact.ninja/fact")
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+    });
+
   return (
-    <div>App</div>
-  )
+    <div>
+      <button type="button">Generate Cat Fact</button>
+      <p></p>
+    </div>
+  );
 }
 
-export default App
+export default Fetch;
