@@ -11,7 +11,7 @@ function Menu() {
         <li>Pizza</li>
         <li>Pizza</li>
       </ul>
-      <h1><a href="/">Go back</a></h1>
+      <h2><a href="/">Go back</a></h2>
     </div>
   )
 }

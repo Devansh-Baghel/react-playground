@@ -6,7 +6,7 @@ function Contact() {
       <h1>This is the contact page</h1>
       <h1>Please do not contact us!</h1>
       <h1>k thx bye</h1>
-      <h1><a href="/">Go back</a></h1>
+      <h2><a href="/">Go back</a></h2>
     </div>
   )
 }
