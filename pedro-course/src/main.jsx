@@ -1,13 +1,26 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Todo from "./todo/Todo"
-import Fetch from './fetch/Fetch'
-import Age from './fetch/Age'
-import Excuse from './fetch/Excuse'
-import Routing from './router/Router'
+import Router2 from "./router2/Router2"
+import Profile from './router2/Profile'
+
+import { createBrowserRouter } from 'react-router-dom'
+import { RouterProvider } from 'react-router-dom'
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Router2 />,
+  },
+  {
+    path: "/profile",
+    element: <Profile />,
+  }
+])
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Routing />
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )
+
